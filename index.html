@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Login</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="login">
+        <h1>LOGIN</h1>
+          <form onsubmit="buttonSubmit()" method="post" name="loginform">
+            <table>
+              <tr>
+                <td>
+                  Username: <input type="text" name="user" placeholder="Username">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Password: <input type="text" name="password" placeholder="Password">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Select user type:
+                  <select class="usertypeSelection" name="usertype">
+                    <option value="admin">admin</option>
+                    <option value="user">user</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+            <input type="submit" value="Submit">
+          </form>
+      </div>
+    </div>
+
+    <script>
+    function buttonSubmit() {
+      var collection = document.forms['loginform'];
+      console.log(collection);
+      alert('Form submitted!');
+    }
+    </script>
+
+  </body>
+</html>
